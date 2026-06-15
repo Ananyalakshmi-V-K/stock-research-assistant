@@ -8,7 +8,7 @@ load_dotenv()
 
 root_agent = Agent(
     name="test_agent",
-    model="gemini-2.0-flash",
+    model="groq/llama-3.3-70b-versatile",
     instruction="You are a helpful assistant. Answer the user's question simply.",
 )
 
