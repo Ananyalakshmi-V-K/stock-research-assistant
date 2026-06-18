@@ -37,7 +37,7 @@ def create_fundamentals_agent():
         name = "fundamentals_agent",
         
         #using groq with llama as we set up earlier
-        model="groq/llama-3.3-70b-versatile",
+        model="anthropic/claude-haiku-4-5-20251001",
 
         #this instruction tells the agent what its role is
         #and how it should behavve

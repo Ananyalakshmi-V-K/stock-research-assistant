@@ -19,7 +19,7 @@ def create_sentiment_agent():
     agent = Agent(
         name="sentiment_agent",
 
-        model="groq/llama-3.3-70b-versatile",
+        model="anthropic/claude-haiku-4-5-20251001",
 
         instruction="""
         You are a financial sentiment analysis agent. Your job is to:

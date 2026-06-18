@@ -31,7 +31,7 @@ def create_news_agent():
     
     agent = Agent(
         name="news_agent",
-        model="groq/llama-3.3-70b-versatile",
+        model="anthropic/claude-haiku-4-5-20251001",
 
         instruction="""
         You are a financial news analyst agent. Your job is to:
