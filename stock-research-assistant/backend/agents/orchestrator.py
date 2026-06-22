@@ -12,6 +12,13 @@ from agents.sentiment_agent import sentiment_agent
 
 load_dotenv()
 
+#import os
+import litellm
+os.environ["OPENROUTER_API_KEY"] = os.getenv("OPENROUTER_API_KEY")
+# Map the model name without :free to use the free endpoint
+litellm.model_alias_map = {
+    "openrouter/google/gemma-4-31b-it": "openrouter/google/gemma-4-31b-it:free"
+}
 def create_orchestrator():
     """
     Creates the root orchestrator agent that manages all sub agents.
@@ -21,7 +28,7 @@ def create_orchestrator():
 
     agent = Agent(
         name="orchestrator",
-        model="anthropic/claude-haiku-4-5-20251001",
+        model="openrouter/google/gemma-4-31b-it",
         instruction="""
         You are the root orchestrator agent for PRISM - a Stock Research Assistant.
         You MUST call ALL THREE sub agents before giving a final response.

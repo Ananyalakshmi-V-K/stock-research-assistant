@@ -4,6 +4,7 @@ from google.adk.agents import Agent
 
 load_dotenv()
 
+
 #this agent is responsible for analyzing the sentiment
 #of teh news and fundamentals data combined
 #it does not need any external tools - it uses the LLM's
@@ -19,7 +20,7 @@ def create_sentiment_agent():
     agent = Agent(
         name="sentiment_agent",
 
-        model="anthropic/claude-haiku-4-5-20251001",
+        model="openrouter/google/gemma-4-31b-it",
 
         instruction="""
         You are a financial sentiment analysis agent. Your job is to:

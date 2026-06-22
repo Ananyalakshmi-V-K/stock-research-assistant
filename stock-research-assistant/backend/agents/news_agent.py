@@ -4,6 +4,7 @@ from google.adk.agents import Agent
 from tools.search_tool import search_stock_news
 load_dotenv()
 
+
 #this agent is responsible for searching and summarizing
 #the latest news about a stock or company
 
@@ -31,7 +32,7 @@ def create_news_agent():
     
     agent = Agent(
         name="news_agent",
-        model="anthropic/claude-haiku-4-5-20251001",
+        model="openrouter/google/gemma-4-31b-it",
 
         instruction="""
         You are a financial news analyst agent. Your job is to:

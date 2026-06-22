@@ -5,6 +5,7 @@ from tools.stock_tool import get_stock_fundamentals
 
 load_dotenv()
 
+
 #This agent is responsible for fetching and analyzing
 #the financial fundamentals of a stock
 #it uses the get_stock_fundamentals tool we built earlier
@@ -37,7 +38,7 @@ def create_fundamentals_agent():
         name = "fundamentals_agent",
         
         #using groq with llama as we set up earlier
-        model="anthropic/claude-haiku-4-5-20251001",
+        model="openrouter/google/gemma-4-31b-it",
 
         #this instruction tells the agent what its role is
         #and how it should behavve
